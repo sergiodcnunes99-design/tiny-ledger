@@ -100,6 +100,54 @@ Invoke-RestMethod `
   -Method Get
 ```
 
+4. Create Session
+
+macOS / Linux (cURL):
+
+```Bash
+curl -X POST http://localhost:8080/api/session
+```
+
+windows (PowerShell):
+
+```powershell
+Invoke-RestMethod `
+  -Uri "http://localhost:8080/api/session" `
+  -Method Post
+```
+
+5. Rollback Session
+
+macOS / Linux (cURL):
+
+```Bash
+curl -X POST http://localhost:8080/api/session/rollback
+```
+
+windows (PowerShell):
+
+```powershell
+Invoke-RestMethod `
+  -Uri "http://localhost:8080/api/session/rollback" `
+  -Method Post
+```
+
+6. Commit Session
+
+macOS / Linux (cURL):
+
+```Bash
+curl -X POST http://localhost:8080/api/session/commit
+```
+
+windows (PowerShell):
+
+```powershell
+Invoke-RestMethod `
+  -Uri "http://localhost:8080/api/session/commit" `
+  -Method Post
+```
+
 ## Assumptions
 Throughout the code comments started by `"ASSUMPTION:"` can be found. Their purpose is to give context on why certain
 decisions were made, most of them to simplify the project.
