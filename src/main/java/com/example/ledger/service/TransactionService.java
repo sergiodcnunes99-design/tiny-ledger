@@ -36,4 +36,8 @@ public class TransactionService {
                 .stream()
                 .sorted(Comparator.comparing(Transaction::getDate)).toList().reversed();
     }
+
+    public void deleteTransactionsStartingOnDate(final Date sessionInitDate){
+        transactionRepository.deleteTransactionsStartingOnDate(sessionInitDate);
+    }
 }
